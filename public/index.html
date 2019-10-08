@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="css/inputStyle.css" media="screen,projection" /> </head>
+<script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144540420-1"></script>
+    <link rel="canonical" href="https://shackleco.com" />
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144540420-1');
+</script>
+
+
+<body>
+    <META NAME=“Description” CONTENT="soft shackles are the way of the future, lighter, faster, stronger.. buy today, our prices are less expensive than all of our competetors. Email us for inquires about rigging in Newport Beach, Alamitos Bay, San Francisco, and other locations in southern california. Our soft shackles blow metal shackles out of the water no mater what they are used for.">
+    <title>Shackle CO</title>
+    <!--JavaScript at end of body for optimized loading-->
+    <div class="navbar-fixed">
+        <nav class="light-blue accent-3">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo"><img src="images/logo_shackle_white_back.png" style="max-height:56px;"></a> <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pre-made.html">Pre-Made</a></li>
+                    <li><a href="custom.html">Custom Shackles</a></li>
+                    <li><a href="towRopes.html">Custom Rigging</a></li>
+                    <li><a href="about.html">About Soft Shackles</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pre-made.html">Pre-Made</a></li>
+        <li><a href="custom.html">Custom Shackles</a></li>
+        <li><a href="towRopes.html">Custom Rigging</a></li>
+        <li><a href="about.html">About Soft Shackles</a></li>
+    </ul>
+    <div class="slider fullscreen" style="position: fixed;
+  top: 56px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+background-color:cyan ;">
+        <ul class="slides">
+             <li> <img src="images/spin%20sheets.png">
+                <div class="caption center-align">
+                    <h3 class="white-text">Pre-Made</h3>
+                    <h6 class="light grey-text text-lighten-3">New! C420 tapered spinnaker sheets - $105</h6>
+                    <a href="pre-made.html">
+                        <button type="submit" id="submit" class="waves-effect waves-light btn white light-blue-text text-accent-3">Visit pre-made</button>
+                    </a>
+                </div>
+            </li>
+            <li> <img src="images/IMG_0904.jpg">
+                <div class="caption center-align">
+                    <h3 class="white-text">Pre-Made</h3>
+                    <h6 class="light grey-text text-lighten-3">SAVE UP TO $50 on pre-made soft shackles, endless loops, tow-bridles, and more!</h6>
+                    <a href="pre-made.html">
+                        <button type="submit" id="submit" class="waves-effect waves-light btn white light-blue-text text-accent-3">Visit pre-made</button>
+                    </a>
+                </div>
+            </li>
+            <li> <img src="images/IMG_0898.jpg">
+                <div class="caption left-align">
+                    <h3 class="white-text">Custom Shackles</h3>
+                    <h6 class="light grey-text text-lighten-3">Here, you can order custom soft shackles and endless loops with strengths up to 23,000lbs! Along with chafe gaurd options for heavy duty jobs.</h6>
+                    <a href="custom.html">
+                        <button type="submit" id="submit" class="waves-effect waves-light btn white light-blue-text text-accent-3">Visit custom</button>
+                    </a>
+                </div>
+            </li>
+            <li> <img src="images/bridle.jpg">
+                <div class="caption right-align">
+                    <h3 class="white-text">Custom Rigging</h3>
+                    <h6 class="light grey-text text-lighten-3">For custom rigging jobs shipped anywhere in the US, contact us dirrectly and we will work with you on any rigging you may need.</h6>
+                    <a href="towRopes.html">
+                        <button type="submit" id="submit" class="waves-effect waves-light btn white light-blue-text text-accent-3">Visit custom rigging</button>
+                    </a>
+                </div>
+            </li>
+           
+        </ul>
+    </div>
+    <div style="
+   top: 90%;
+  position: absolute;
+                width:100%;" class="center"> <a class="btn-floating btn-large light-blue accent-3 pulse" id="arrow" href="#con"><i class="medium material-icons white-text ">arrow_downward</i></a></div>
+    <div style="
+   top: 100%;
+  position: absolute;
+                background-color:white; width:100%;" id="con">
+        <div class="container">
+            <div class="section">
+                <div class="row">
+                    <div class="col s12 center">
+                        <h3><i class="mdi-content-send brown-text"></i></h3>
+                        <h4>The Team</h4> </div>
+                </div>
+                <!--   Icon Section   -->
+                <div class="row">
+                    <div class="col s12 m4">
+                        <div class="person"> <img src="images/BYC-to-weather-heeled-672x372.jpg" alt="" class="center circle responsive-img">
+                            <!-- notice the "circle" class -->
+                            <h5 class="center">Local, fun, and fast</h5>
+                            <p class="light">We've grown up in Southern California racing everything from sabots to Gov Cup 22's together.</p>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="person"> <img src="images/Christophe%20Killian%20Photo.png" alt="" class="center circle responsive-img">
+                            <h5 class="center">Collegiate Expertise</h5>
+                            <p class="light">College of Charleston Varsity Team, UCSB Club team</p>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="person"> <img src="images/IMG_4942.JPG" alt="" class="center circle responsive-img">
+                            <h5 class="center">Industry Professionalism</h5>
+                            <p class="light">North Sails, Alan Andrews Yacht Design, West Marine, RMS Yacht Services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer light-blue accent-3">
+            <div class="container">
+                <div class="row">
+                    <div class="contact col l6 s12">
+                        <h3 class="white-text">Email Us</h3>
+                        <form id="contactForm">
+                            <p class="input-field col s6">
+                                <label class="white-text">First Name</label>
+                                <input type="text" name="first" id="first" required> </p>
+                            <p class="input-field col s6">
+                                <label class="white-text">Last Name</label>
+                                <input type="text" name="company" id="last"> </p>
+                            <p class="input-field col s6">
+                                <label class="white-text">Email Address</label>
+                                <input type="email" name="email" id="email" required> </p>
+                            <p class="input-field col s6">
+                                <label class="white-text">Phone Number</label>
+                                <input type="text" name="phone" id="phone"> </p>
+                            <p class="full" class="input-field col s6">
+                                <label for="textarea2">Message</label>
+                                <textarea id="message" class="materialize-textarea white-text" type="box" data-length="200"></textarea>
+                            </p>
+                            <p class="full" class="input-field col s6">
+                                <button type="submit" id="submit" class="waves-effect waves-light btn white light-blue-text text-accent-3"><i class="material-icons left">send</i>Send Message</button>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                            <li><a class="grey-text text-lighten-3" href="pre-made.html">Pre-Made</a></li>
+                            <li><a class="grey-text text-lighten-3" href="custom.html">Custom Shackles</a></li>
+                            <li><a class="grey-text text-lighten-3" href="towRopes.html">Custom Rigging</a></li>
+                            <li><a class="grey-text text-lighten-3" href="about.html">About Soft Shackles</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container"> @2019 Copyright </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/init.js"></script>
+<script src="js/fireBase.js"></script>
+
+</html>

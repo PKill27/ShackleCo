@@ -1,0 +1,85 @@
+.input-field [type=text] {
+    color: white;
+}
+
+.input-field [type=box] {
+    color: white;
+}
+
+.input-field [type=tel] {
+    color: white;
+}
+
+.input-field [type=email] {
+    color: white;
+}
+
+.input-field input[type]:not([readonly]),
+.input-field input[type]:focus:not([readonly]),
+.input-field textarea:not([readonly]),
+.input-field textarea:focus:not([readonly]) {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 white;
+    color: white;
+}
+
+.input-field input[type]:focus:not([readonly])+label,
+.input-field textarea:focus:not([readonly])+label {
+    color: white;
+}
+
+.input-field input[type].invalid,
+.input-field input[type].invalid:focus,
+.input-field textarea.invalid,
+.input-field textarea.invalid:focus {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 white;
+}
+
+.input-field input[type].invalid:focus+label,
+.input-field input[type].invalid~.helper-text::after,
+.input-field input[type].invalid:focus~.helper-text::after,
+.input-field textarea.invalid:focus+label,
+.input-field textarea.invalid~.helper-text::after,
+.input-field textarea.invalid:focus~.helper-text::after {
+    color: white;
+}
+
+.input-field input[type].valid,
+.input-field input[type].valid:focus,
+.input-field textarea.valid,
+.input-field textarea.valid:focus {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 white;
+}
+
+.input-field input[type].valid:focus+label,
+.input-field input[type].valid~.helper-text::after,
+.input-field input[type].valid:focus~.helper-text::after,
+.input-field textarea.valid:focus+label,
+.input-field textarea.valid~.helper-text::after,
+.input-field textarea.valid:focus~.helper-text::after {
+    color: white;
+}
+
+@font-face {
+    font-family: sharpSans;
+    src: url('fonts/thin.otf')format("opentype");
+}
+/**font-family: 'Open Sans', sans-serif;**/
+
+label {
+    color: white;
+}
+
+html {
+    font-family: 'sharpsans', serif;
+    font-size: 20px;
+    scroll-behavior: smooth;
+}
+.card {
+  overflow: visible;
+}
+.select-dropdown{
+    overflow-y: auto !important;
+}

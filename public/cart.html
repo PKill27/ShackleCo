@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> </head>
+<link type="text/css" rel="stylesheet" href="css/inputStyle.css" media="screen,projection" />
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144540420-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-144540420-1');
+</script>
+
+
+<body>
+    <title>Shackle CO</title>
+    <!--JavaScript at end of body for optimized loading-->
+    <div class="navbar-fixed">
+        <nav class="light-blue accent-3">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo"><img src="images/logo_shackle_white_back.png" style="max-height:56px;"></a> <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pre-made.html">Pre-Made</a></li>
+                    <li><a href="custom.html">Custom Shackles</a></li>
+                    <li><a href="towRopes.html">Custom Rigging</a></li>
+                    <li><a href="about.html">About Soft Shackles</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pre-made.html">Pre-Made</a></li>
+        <li><a href="custom.html">Custom Shackles</a></li>
+        <li><a href="towRopes.html">Custom Rigging</a></li>
+        <li><a href="about.html">About Soft Shackles</a></li>
+    </ul>
+    <div class="slider fullscreen" style="position: fixed;
+  top: 56px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+background-color:cyan ;">
+        <ul class="slides">
+            <li> <img src="images/IMG_0904.jpg">
+                <div class="caption center-align">
+                    <h3 class="white-text">Cart</h3>
+                    <h6 class="light grey-text text-lighten-3">View cart and make changes below</h6>
+
+                </div>
+        </ul>
+    </div>
+    <div style="
+   top: 50%;
+  position: absolute;
+                background-color:white; width:100%;">
+        <div id="cartInfo"></div>
+        <div class="row center">
+            <button id="clear" onclick="removeAll()" class="waves-effect waves-light btn grey darken-1 white-text">Clear Cart</button>
+            <a href="mailingInfo.html">
+                <button id="check_out_button" class="waves-effect waves-light btn white light-blue accent-3 white-text">Check Out</button>
+            </a>
+            <a href="pre-made.html">
+                <button id="continue" class="waves-effect waves-light btn grey darken-1 white-text">Continue Shopping</button>
+            </a>
+        </div>
+        <footer class="page-footer light-blue accent-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Payment Information</h5>
+                        <p class="grey-text text-lighten-4">We do not handle any credit card info ourselves we use a trusted 3rd party company, <a href="https://stripe.com">Stripe</a>. Additionally there is a flat rate of $5 for shipping on orders under $50.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="pre-made.html">Pre-Made</a></li>
+                            <li><a class="grey-text text-lighten-3" href="custom.html">Custom Shackles</a></li>
+                            <li><a class="grey-text text-lighten-3" href="about.html">About Us</a></li>
+                            <li><a class="grey-text text-lighten-3" href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container"> @2019 Copyright </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/init.js"></script>
+<script>
+    var cartString = localStorage.getItem('cart');
+    var cartObject = JSON.parse(cartString);
+    var checkString = localStorage.getItem('check');
+    var checkObject = JSON.parse(checkString);
+
+    function makeUL(array) {
+        // Create the list element:
+        if (array == null) {
+            var placeHolder = document.createElement('h4');
+            placeHolder.innerHTML = "Nothing in cart"
+            placeHolder.classList.add("center");
+            return placeHolder;
+        }
+        var table = document.createElement('table');
+        var tableHead = document.createElement('thead');
+        var row = document.createElement('tr');
+        var nam = document.createElement('th');
+        var quant = document.createElement('th');
+        var color = document.createElement('th');
+        var pri = document.createElement('th');
+        nam.innerHTML = "Product Name";
+        quant.innerHTML = "Quantity";
+        color.innerHTML = "Color";
+        pri.innerHTML = "Total Price";
+        row.appendChild(nam);
+        row.appendChild(quant);
+        row.appendChild(color);
+        row.appendChild(pri);
+        tableHead.appendChild(row);
+        table.appendChild(tableHead);
+        var tableBody = document.createElement('tbody');
+        tableBody.classList.add("highlight");
+        tableBody.classList.add("responsive-table");
+        var quantity = 0;
+        var price = 0;
+        for (var i = 0; i < array.length; i++) {
+            var row = document.createElement('tr');
+            var nam = document.createElement('td');
+            var quant = document.createElement('td');
+            var pri = document.createElement('td');
+            var color = document.createElement('td');
+            color.innerHTML = array[i].color;
+            var holder = '<select id="select_' + i + '">';
+            var stringQuant = "";
+            if (array[i].quantity >= 3) {
+                var minusTwo = array[i].quantity - 2;
+                var minusOne = array[i].quantity - 1;
+                var plusOne = array[i].quantity + 1;
+                var plusTwo = array[i].quantity + 2;
+                stringQuant = holder + ' <option value="' + array[i].quantity + '" disabled selected>' + array[i].quantity + '</option>' + ' <option value="0">0</option>' + ' <option value="' + minusTwo + '">' + minusTwo + '</option>' + ' <option value="' + minusOne + '">' + minusOne + '</option>' + ' <option value="' + array[i].quantity + '">' + array[i].quantity + '</option>' + ' <option value="' + plusOne + '">' + plusOne + '</option>' + ' <option value="' + plusTwo + '">' + plusTwo + '</option>' + '</select>';
+            } else {
+                stringQuant = holder + ' <option value="' + array[i].quantity + '" disabled selected>' + array[i].quantity + '</option>' + ' <option value="0">0</option>' + ' <option value="1">1</option>' + ' <option value="2">2</option>' + ' <option value="3">3</option>' + ' <option value="4">4</option>' + ' <option value="5">5</option>' + '</select>';
+            }
+
+            quant.innerHTML = stringQuant
+            nam.innerHTML = array[i].itmName;
+            pri.innerHTML = (array[i].price * array[i].quantity).toFixed(2);
+            price = price + parseFloat((array[i].price * array[i].quantity).toFixed(2));
+            price = parseFloat(price.toFixed(2));
+            quantity = quantity + array[i].quantity;
+            row.appendChild(nam);
+            row.appendChild(quant);
+            row.appendChild(color);
+            row.appendChild(pri);
+            table.appendChild(row);
+        }
+        var total = document.createElement('tr');
+        var totalName = document.createElement('td');
+        var totalQuant = document.createElement('td');
+        var totalPrice = document.createElement('td');
+        var placeHolder = document.createElement('td');
+        totalName.innerHTML = "All Products";
+        totalQuant.innerHTML = quantity;
+        totalPrice.innerHTML = price;
+        total.appendChild(totalName);
+        total.appendChild(totalQuant);
+        total.appendChild(placeHolder);
+        total.appendChild(totalPrice);
+        tableBody.appendChild(total);
+        table.appendChild(tableBody);
+        //localStorage.removeItem("totalCost");
+        localStorage.setItem("totalCost",price);
+        return table;
+    }
+    document.getElementById('cartInfo').appendChild(makeUL(cartObject));
+
+    function addListeners(i) {
+        var select = document.getElementById("select_" + i);
+        select.addEventListener("change", function () {
+            var e = document.getElementById("select_" + i);
+            var val = e.options[e.selectedIndex].value;
+            cartObject[i].quantity = parseInt(val);
+            checkObject[i].quantity = parseInt(val);
+            console.log(cartObject);
+            localStorage.setItem('cart', JSON.stringify(cartObject));
+            localStorage.setItem('check', JSON.stringify(checkObject));
+            document.getElementById("cartInfo").innerHTML = "";
+            document.getElementById('cartInfo').appendChild(makeUL(cartObject));
+            location.reload();
+        });
+    }
+    for (var i = 0; i < cartObject.length; i++) {
+        addListeners(i);
+    }
+
+    function removeAll() {
+        localStorage.removeItem("completeOrder");
+        localStorage.removeItem("cart");
+        localStorage.removeItem("check");
+        location.reload();
+    }
+</script>
+
+</html>

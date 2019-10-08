@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link type="text/css" rel="stylesheet" href="css/inputStyle.css" media="screen,projection" /> </head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144540420-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144540420-1');
+</script>
+
+
+<body>
+    <title>Shackle CO</title>
+    <!--JavaScript at end of body for optimized loading-->
+    <div class="navbar-fixed">
+        <nav class="light-blue accent-3">
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo"><img src="images/logo_shackle_white_back.png" style="max-height:56px;"></a> <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pre-made.html">Pre-Made</a></li>
+                    <li><a href="custom.html">Custom Shackles</a></li>
+                    <li><a href="towRopes.html">Custom Rigging</a></li>
+                    <li><a href="about.html">About Soft Shackles</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pre-made.html">Pre-Made</a></li>
+        <li><a href="custom.html">Custom Shackles</a></li>
+        <li><a href="towRopes.html">Custom Rigging</a></li>
+        <li><a href="about.html">About Soft Shackles</a></li>
+    </ul>
+    <div class="slider fullscreen" style="position: fixed;
+  top: 56px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+background-color:cyan ;">
+        <ul class="slides">
+            <li> <img src="images/IMG_0904.jpg">
+                <div class="caption center-align">
+                    <h3 class="white-text">Pre-Made</h3>
+                    <h6 class="light grey-text text-lighten-3">SAVE UP TO $50 on pre-made soft shackles, endless loops, tow-bridles, and more!</h6>
+                    
+                    <div class="row"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large light-blue accent-3 pulse" href="cart.html" id="cart" onclick="goToCart()"> <i class="large material-icons">shopping_cart</i><span class="badge" id="badge" style="position: absolute;
+  top: 25px;
+  right: -16px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  color: white; font-size:10pt;">0</span> </a>
+    </div>
+    <div style="
+   top: 90%;
+  position: absolute;
+                width:100%;" class="center"> <a class="btn-floating btn-large light-blue accent-3 pulse" id="arrow" href="#con"><i class="medium material-icons white-text">arrow_downward</i></a></div>
+    <div style=" top: 100%; position: absolute; background-color:white; width:100%;">
+        
+        <div class="row" style="margin-top:35px;" id="con"><h2 class ="center">C420 Products</h2></div>
+         <div class="row"><div class="col s12 m4">
+                <div class="card" style="overflow: visible;">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/spin%20sheets%20product.png"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">420 Spinnaker sheets<i class="material-icons right">more_vert</i></span>
+                        <p>class legal</p>
+                        <p style="text-align:right;">$105.00</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>New regulations on C420 spinnaker sheets allow for new high tech tappered sheets that give an added performace to any sailor.</p>
+                        <select id="select_0">
+                            <option value="Black" selected>Black/Yellow - blue tapper</option>
+                        </select>
+                        <label>Select color</label>
+                        
+                        <select id="quant_0">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                            
+                        </select><a class="waves-effect waves-light btn light-blue accent-3" onclick="addItem( 'sku_FXpe8qOrPrbXGA', 'select_0', 'class legal, C420 spinnaker sheets', '105.00','quant_0')">Add to Cart</a>
+                         
+                    </div>
+                </div>
+            </div></div>
+        <div class="row"><h2 class ="center">Soft Shackles and Loops</h2></div>
+        <div class ="row">
+            <div class="col s12 m4">
+                <div class="card" style="overflow: visible;">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/black.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">2mm Soft Shackle<i class="material-icons right">more_vert</i></span>
+                        <p>2-inch</p>
+                        <p style="text-align:right;">$5.99</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>2mm ShackleCo Soft Shackles are rated for 900 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_1">
+                            <option value="Black" selected>Black</option>
+                        </select>
+                        <label>Select color</label>
+                        
+                        <select id="quant_1">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                            
+                        </select><a class="waves-effect waves-light btn light-blue accent-3" onclick="addItem( 'sku_FUzQT2VV1VBStj', 'select_1', '2mm, 2-inch soft shackle', '5.99','quant_1')">Add to Cart</a>
+                         
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/black.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">2mm Soft Shackle<i class="material-icons right">more_vert</i></span>
+                        <p>3-inch</p>
+                        <p style="text-align:right;">$6.49</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>2mm ShackleCo Soft Shackles are rated for 900 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_2">
+                            
+                            <option value="Black" selected>Black</option>
+                        </select>
+
+                        <label>Select color</label>
+                         <select id="quant_2">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                        </select>
+                        <a class="waves-effect waves-light btn light-blue accent-3"   onclick="addItem( 'sku_FUzSq0rgoQKKvA', 'select_2', '2mm, 3-inch soft shackle', '6.49','quant_2')">Add to Cart</a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/black.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">2mm Soft Shackle<i class="material-icons right">more_vert</i></span>
+                        <p>4-inch</p>
+                        <p style="text-align:right;">$6.99</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>2mm ShackleCo Soft Shackles are rated for 900 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_3">
+                            
+                            <option value="Black" selected>Black</option>
+                        </select>
+                         <select id="quant_3">
+                           <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                         
+                        </select>
+                        <label>Select color</label> <a class="waves-effect waves-light btn light-blue accent-3"  onclick="addItem( 'sku_FUzTCioBLH3cdE', 'select_3', '2mm, 4-inch soft shackle', '6.99','quant_3')">Add to Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/green.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">2.5mm Soft Shackle<i class="material-icons right">more_vert</i></span>
+                        <p>2-inch</p>
+                        <p style="text-align:right;">$5.99</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>2.5mm ShackleCo Soft Shackles are rated for 1600 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_4">
+                        
+                            <option value="Black" selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                        </select>
+                         <select id="quant_4">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                            
+                        </select>
+                        <label>Select color</label> <a class="waves-effect waves-light btn light-blue accent-3"   onclick="addItem( 'sku_FUzUHfJhatr1Gy', 'select_4', '2.5mm, 2-inch soft shackle', '5.99','quant_4')">Add to Cart</a></div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/green.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">2.5mm Soft Shackle<i class="material-icons right">more_vert</i></span>
+                        <p>3-inch</p>
+                        <p style="text-align:right;">$6.49</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>2.5mm ShackleCo Soft Shackles are rated for 1600 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_5">
+                           
+                            <option value="Black" selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                        </select>
+                         <select id="quant_5">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                           
+                        </select>
+                        <label>Select color</label> <a class="waves-effect waves-light btn light-blue accent-3"  onclick="addItem( 'sku_FUzVKZ7kvsQ7fX', 'select_5', '2.5mm, 3-inch soft shackle', '6.49','quant_5')">Add to Cart</a></div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/green.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">2.5mm Soft Shackle<i class="material-icons right">more_vert</i></span>
+                        <p>4-inch</p>
+                        <p style="text-align:right;">$6.99</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>2.5mm ShackleCo Soft Shackles are rated for 1600 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_6">
+                           
+                            <option value="Black" selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                        </select>
+                         <select id="quant_6">
+                           <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                            
+                        </select>
+                        <label>Select color</label> <a class="waves-effect waves-light btn light-blue accent-3"  onclick="addItem( 'sku_FUzW0EJfSkOhrE', 'select_6', '2.5mm, 4-inch soft shackle', '6.99','quant_6')">Add to Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/red.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">3mm Soft Shackle<i class="material-icons right">more_vert</i></span>
+                        <p>2-inch</p>
+                        <p style="text-align:right;">$8.99</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>3mm ShackleCo Soft Shackles are rated for 2500 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_7">
+                            
+                            <option value="Black" selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                        </select>
+                         <select id="quant_7">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                         
+                        </select>
+                        <label>Select color</label> <a class="waves-effect waves-light btn light-blue accent-3"  onclick="addItem( 'sku_FUzWyCziJP18cK', 'select_7', '3mm, 2-inch soft shackle', '8.99','quant_7')">Add to Cart</a></div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/red.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">3mm Soft Shackle<i class="material-icons right">more_vert</i></span>
+                        <p>3-inch</p>
+                        <p style="text-align:right;">$9.49</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>3mm ShackleCo Soft Shackles are rated for 2500 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id='select_8'>
+                           
+                            <option value="Black" selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                        </select>
+                        <label>Select color</label>
+                         <select id="quant_8">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                            
+                        </select><a class="waves-effect waves-light btn light-blue accent-3" onclick="addItem( 'sku_FUzXbgcKuhuVxT', 'select_8', '3mm, 3-inch soft shackle', '9.49','quant_8')">Add to Cart</a></div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/red.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">3mm Soft Shackle<i class="material-icons right">more_vert</i></span>
+                        <p>4-inch</p>
+                        <p style="text-align:right;">$9.99</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>3mm ShackleCo Soft Shackles are rated for 2500 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_9">
+                            
+                            <option value="Black" selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                        </select>
+                         <select id="quant_9">
+                           <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                          
+                        </select>
+                        <label>Select color</label> <a class="waves-effect waves-light btn light-blue accent-3"  onclick="addItem( 'sku_FUzYgvDa8NLrdN', 'select_9', '3mm, 4-inch soft shackle', '9.99','quant_9')">Add to Cart</a></div>
+                </div>
+            </div>
+        </div>
+         <div class="row" style="margin-top:35px;" id="con">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/loop.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">2mm Endless-Loop<i class="material-icons right">more_vert</i></span>
+                        <p>4-inch</p>
+                        <p style="text-align:right;">$5.99</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>2mm ShackleCo Endless Loops are rated for 900 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_10">
+                            <option value="Black" selected>Black</option>
+                        </select>
+                        <label>Select color</label>
+                        
+                        <select id="quant_10">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                             
+                        </select><a class="waves-effect waves-light btn light-blue accent-3" onclick="addItem( 'sku_FUzZbbFwxxe9d6', 'select_10', '2mm, 4-inch Endless-Loop', '5.99','quant_10')">Add to Cart</a>
+                         
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/loop.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">2mm Endless-Loop<i class="material-icons right">more_vert</i></span>
+                        <p>5-inch</p>
+                        <p style="text-align:right;">$6.49</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>2mm ShackleCo Endless Loops are rated for 900 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_11">
+                            
+                            <option value="Black" selected>Black</option>
+                        </select>
+
+                        <label>Select color</label>
+                         <select id="quant_11">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                          
+                        </select>
+                        <a class="waves-effect waves-light btn light-blue accent-3"   onclick="addItem( 'sku_FUzaKL80cHfyvy', 'select_11', '2mm, 5-inch Endless-Loop', '6.49','quant_11')">Add to Cart</a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/loop.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">2mm Endless-Loop<i class="material-icons right">more_vert</i></span>
+                        <p>6-inch</p>
+                        <p style="text-align:right;">$6.99</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>2mm ShackleCo Endless Loops are rated for 900 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_12">
+                            
+                            <option value="Black" selected>Black</option>
+                        </select>
+                         <select id="quant_12">
+                           <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                           
+                        </select>
+                        <label>Select color</label> <a class="waves-effect waves-light btn light-blue accent-3"  onclick="addItem( 'sku_FUzbguOCJ11BU4', 'select_12', '2mm, 6-inch Endless-Loop', '6.99','quant_12')">Add to Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/loop.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">2.5mm Endless-Loop<i class="material-icons right">more_vert</i></span>
+                        <p>4-inch</p>
+                        <p style="text-align:right;">$5.99</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>2.5mm ShackleCo Endless Loops are rated for 1600 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_13">
+                        
+                            <option value="Black" selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                        </select>
+                         <select id="quant_13">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                            
+                        </select>
+                        <label>Select color</label> <a class="waves-effect waves-light btn light-blue accent-3"   onclick="addItem( 'sku_FUzb4iQwWbet4i', 'select_13', '2.5mm, 4-inch Endless-Loop', '5.99','quant_13')">Add to Cart</a></div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/loop.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">2.5mm Endless-Loop<i class="material-icons right">more_vert</i></span>
+                        <p>5-inch</p>
+                        <p style="text-align:right;">$6.49</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>2.5mm ShackleCo Endless Loops are rated for 1600 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_14">
+                           
+                            <option value="Black" selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                        </select>
+                         <select id="quant_14">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                           
+                        </select>
+                        <label>Select color</label> <a class="waves-effect waves-light btn light-blue accent-3"  onclick="addItem( 'sku_FUzclQEPKmmhHa', 'select_14', '2.5mm, 5-inch Endless Loop', '6.49','quant_14')">Add to Cart</a></div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/loop.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">2.5mm Soft Shackle<i class="material-icons right">more_vert</i></span>
+                        <p>6-inch</p>
+                        <p style="text-align:right;">$6.99</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>2.5mm ShackleCo Endless Loops are rated for 1600 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_15">
+                           
+                            <option value="Black" selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                        </select>
+                         <select id="quant_15">
+                           <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                         
+                        </select>
+                        <label>Select color</label> <a class="waves-effect waves-light btn light-blue accent-3"  onclick="addItem( 'sku_FUzdem7hVPSBVJ', 'select_15', '2.5mm, 6-inch Endless-Loop', '6.99','quant_15')">Add to Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/loop.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">3mm Endless-Loop<i class="material-icons right">more_vert</i></span>
+                        <p>4-inch</p>
+                        <p style="text-align:right;">$8.99</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>3mm ShackleCo Endless Loops are rated for 2500 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_16">
+                            
+                            <option value="Black" selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                        </select>
+                         <select id="quant_16">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                             
+                        </select>
+                        <label>Select color</label> <a class="waves-effect waves-light btn light-blue accent-3"  onclick="addItem( 'sku_FUzeOjqZGCaomD', 'select_16', '3mm, 4-inch Endless-Loop', '8.99','quant_16')">Add to Cart</a></div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/loop.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">3mm Endless-Loop<i class="material-icons right">more_vert</i></span>
+                        <p>5-inch</p>
+                        <p style="text-align:right;">$9.49</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>3mm ShackleCo Endless Loops are rated for 2500 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id='select_17'>
+                           
+                            <option value="Black" selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                        </select>
+                        <label>Select color</label>
+                         <select id="quant_17">
+                            <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                            
+                        </select><a class="waves-effect waves-light btn light-blue accent-3" onclick="addItem( 'sku_FUzfgtseKxH2zL', 'select_8', '3mm, 5-inch Endless-Loop', '9.49','quant_17')">Add to Cart</a></div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light"> <img class="activator" src="images/loop.JPG"> </div>
+                    <div class="card-content"> <span class="card-title activator grey-text text-darken-4">3mm Endless-Loop<i class="material-icons right">more_vert</i></span>
+                        <p>6-inch</p>
+                        <p style="text-align:right;">$9.99</p>
+                    </div>
+                    <div class="card-reveal"> <span class="card-title grey-text text-darken-4">About<i class="material-icons right">close</i></span>
+                        <p>3mm ShackleCo Endless Loops are rated for 2500 pounds of tension. Look below for product colors and select quantity.</p>
+                        <select id="select_18">
+                            
+                            <option value="Black" selected>Black</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Green">Green</option>
+                            <option value="Red">Red</option>
+                        </select>
+                         <select id="quant_18">
+                           <option value=1 selected>1</option>
+                             <option value=2>2</option>
+                             <option value=3>3</option>
+                             <option value=4>4</option>
+                             <option value=5 >5</option>
+                           
+                             
+                             
+                        </select>
+                        <label>Select color</label> <a class="waves-effect waves-light btn light-blue accent-3"  onclick="addItem( 'sku_FUzgrA3faPb4l9', 'select_18', '3mm, 6-inch Endless-Loop', '9.99','quant_18')">Add to Cart</a></div>
+                </div>
+            </div>
+        </div>
+        <footer class="page-footer light-blue accent-3">
+            <div class="container">
+                <div class="row">
+                    <div class="contact col l6 s12">
+                        <h3 class="white-text">Email Us</h3>
+                        <form id="contactForm">
+                            <p class="input-field col s6">
+                                <label class="white-text">First Name</label>
+                                <input type="text" name="first" id="first" required> </p>
+                            <p class="input-field col s6">
+                                <label class="white-text">Last Name</label>
+                                <input type="text" name="company" id="last"> </p>
+                            <p class="input-field col s6">
+                                <label class="white-text">Email Address</label>
+                                <input type="email" name="email" id="email" required> </p>
+                            <p class="input-field col s6">
+                                <label class="white-text">Phone Number</label>
+                                <input type="text" name="phone" id="phone"> </p>
+                            <p class="full" class="input-field col s6">
+                                <label for="textarea2">Message</label>
+                                <textarea id="message" class="materialize-textarea white-text" type="box" data-length="200"></textarea>
+                            </p>
+                            <p class="full" class="input-field col s6">
+                                <button type="submit" id="submit" class="waves-effect waves-light btn white light-blue-text text-accent-3"><i class="material-icons left">send</i>Send Message</button>
+                            </p>
+                        </form>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Links</h5>
+                        <ul>
+                            <li><a class="grey-text text-lighten-3" href="index.html">Home</a></li>
+                            <li><a class="grey-text text-lighten-3" href="pre-made.html">Pre-Made</a></li>
+                            <li><a class="grey-text text-lighten-3" href="custom.html">Custom Shackles</a></li>
+                            <li><a class="grey-text text-lighten-3" href="towRopes.html">Custom Rigging</a></li>
+                            <li><a class="grey-text text-lighten-3" href="about.html">About Soft Shackles</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container"> @2019 Copyright </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script src="js/init.js"></script>
+<script>
+    var itms = [];
+    var cartString = localStorage.getItem('cart');
+    var checkString = localStorage.getItem('check');
+    var cart = [];
+    try {
+        cart = JSON.parse(cartString);
+        if (cart == null) {
+            cart = [];
+        }
+    } catch (err) {}
+    try {
+        itms = JSON.parse(checkString);
+        if (itms == null) {
+            itms = [];
+        }
+    } catch (err) {}
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].quantity == 0) {
+            cart.splice(i, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+    }
+    for (var i = 0; i < itms.length; i++) {
+        if (itms[i].quantity == 0) {
+            itms.splice(i, 1);
+            localStorage.setItem('check', JSON.stringify(itms));
+        }
+    }
+    for (var i = 0; i < cart.length; i++) {
+        var notification = document.getElementById('badge').innerHTML;
+        var newLine = parseInt(notification, 10) + cart[i].quantity;
+        document.getElementById("badge").innerHTML = newLine;
+    }
+
+    function addItem(uniqueID, selector, name, price,quant) {
+        M.toast({html: 'Added to cart', classes: 'rounded light-blue accent-3'})
+        var e = document.getElementById(quant);
+        var val = parseInt(e.options[e.selectedIndex].value);
+        var sel = document.getElementById(selector);
+        var color = sel.options[sel.selectedIndex].value;
+        var boo = true;
+        loop: for (var i = 0; i < itms.length; i++) {
+            if (itms[i].sku.toString() == uniqueID) {
+                boo = false;
+                itms[i].quantity = itms[i].quantity + val;
+                if (color == cart[i].color) {
+                    cart[i].quantity = cart[i].quantity + val;
+                    break loop;
+                } else {
+                    var holder = true;
+                    console.log(color);
+                    for (var j = 0; j < cart.length; j++) {
+                        if (color == cart[j].color && cart[j].sku == uniqueID) {
+                            cart[j].quantity = cart[j].quantity + val;
+                            holder = false;
+                            break loop;
+                        }
+                    }
+                    if (holder) {
+                        cart.push({
+                            sku: uniqueID,
+                            color: color,
+                            itmName: name,
+                            quantity: val,
+                            price: price
+                        })
+                        break loop;
+                    }
+                }
+            }
+        }
+        if (boo) {
+            itms.push({
+                sku: uniqueID,
+                quantity: val
+            })
+            cart.push({
+                sku: uniqueID,
+                color: color,
+                itmName: name,
+                paid: false,
+                quantity: val,
+                price: price
+            })
+            var num = itms.indexOf(uniqueID).quantity;
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        localStorage.setItem('check', JSON.stringify(itms));
+        console.log(itms);
+        var notification = document.getElementById('badge').innerHTML;
+        var newLine = parseInt(notification, 10) + val;
+        document.getElementById("badge").innerHTML = newLine;
+    }
+</script>
+<script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.2.2/firebase-auth.js"></script>
+<script src="js/fireBase.js"></script>
+
+</html>

@@ -1,0 +1,19 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [ {
+    // Specifies a CORS header for all font files
+    "source": "**/*.@(eot|otf|ttf|ttc|woff|Fonts.css)",
+    "headers": [ {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    } ]
+  }]
+  }
+  
+}
