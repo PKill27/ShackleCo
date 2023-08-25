@@ -22,8 +22,8 @@ const mailTransport = nodemailer.createTransport({
     secureConnection: true,
     port: 587,
     auth: {
-        user: "rigging@shackleco.com",
-        pass: "shackleco!!D7"
+        user: "",
+        pass: ""
     }
        
      
